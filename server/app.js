@@ -30,12 +30,12 @@ app.use(helmet());
 //   })
 // );
 
-const allowedOrigins = (process.env.CLIENT_URL || "")
-  .split(",")
-  .map((s) => s.trim())
-  .filter(Boolean);
-
-  console.log("Allowed origins:", allowedOrigins);
+const allowedOrigins = [
+ "https://www.cavabundancegroups.com",
+"https://admin.cavabundancegroups.com",
+"https://cav-client.vercel.app",
+"https://cav-dev-live.vercel.app"
+];
 
 app.use(
   cors({
